@@ -9,7 +9,7 @@ size = Vector2(256, 49)
 [node name="Plate" type="Node2D" unique_id=664769850]
 script = ExtResource("1_2x0a8")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=898169906]
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=436742102]
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=2036032650]
 position = Vector2(8.940697e-06, 7.1525574e-07)
