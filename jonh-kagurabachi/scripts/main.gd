@@ -5,6 +5,7 @@ const PLATE_SCENE = preload("res://scenes/plate.tscn")
 
 func _on_heroi_game_over() -> void:
 	print("game over")
+	get_tree().call_deferred("reload_current_scene")
 
 
 func _on_timer_timeout() -> void:

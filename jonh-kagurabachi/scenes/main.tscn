@@ -50,7 +50,7 @@ position = Vector2(421, 917)
 shape = SubResource("RectangleShape2D_tbgi4")
 
 [node name="Timer" type="Timer" parent="." unique_id=1316571614]
-wait_time = 3.3
+wait_time = 2.5
 autostart = true
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=1476483947]
