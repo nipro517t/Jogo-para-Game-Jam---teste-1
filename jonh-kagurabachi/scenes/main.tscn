@@ -8,11 +8,14 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jyhfs"]
 size = Vector2(128, 126)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tefeu"]
+size = Vector2(129, 126)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0wfyh"]
 size = Vector2(2, 968.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tbgi4"]
-size = Vector2(840, 32)
+size = Vector2(840, 29.5)
 
 [node name="Main" type="Node2D" unique_id=2047773791]
 script = ExtResource("1_jyhfs")
@@ -27,6 +30,12 @@ texture = ExtResource("2_sugp2")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Heroi" unique_id=1746189741]
 shape = SubResource("RectangleShape2D_jyhfs")
 
+[node name="Area2D" type="Area2D" parent="Heroi" unique_id=640602132]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Heroi/Area2D" unique_id=850248715]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_tefeu")
+
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1602076345]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=341176245]
@@ -36,13 +45,8 @@ shape = SubResource("RectangleShape2D_0wfyh")
 [node name="Area2D" type="Area2D" parent="." unique_id=2059313414]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2027046963]
-position = Vector2(421.00003, 955.5)
+position = Vector2(421, 917)
 shape = SubResource("RectangleShape2D_tbgi4")
-
-[node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=378837879]
-position = Vector2(421, 955.5)
-scale = Vector2(6.5625, 0.2578125)
-texture = ExtResource("2_sugp2")
 
 [node name="Timer" type="Timer" parent="." unique_id=1316571614]
 wait_time = 3.3
@@ -59,5 +63,5 @@ shape = SubResource("RectangleShape2D_0wfyh")
 position = Vector2(418, -25)
 
 [connection signal="game_over" from="Heroi" to="." method="_on_heroi_game_over"]
-[connection signal="area_entered" from="Area2D" to="Heroi" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Heroi/Area2D" to="Heroi" method="_on_area_2d_area_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
