@@ -22,6 +22,7 @@ script = ExtResource("1_jyhfs")
 
 [node name="Heroi" type="CharacterBody2D" parent="." unique_id=62894961]
 position = Vector2(421, -131)
+floor_snap_length = 8.0
 script = ExtResource("1_0wfyh")
 
 [node name="Sprite2D" type="Sprite2D" parent="Heroi" unique_id=1819265830]

@@ -1,6 +1,6 @@
 extends Node2D
 
-var altura: int = 55
+var altura: int = 100
 
 func _physics_process(delta: float) -> void:
 	position.y += altura * delta
